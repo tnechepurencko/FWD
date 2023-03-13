@@ -1,6 +1,4 @@
 <script lang="ts">
-    getJoke()
-
     interface DateInterface {
         img: string;
         title: string;
@@ -17,22 +15,20 @@
 
         res = await fetch('https://getxkcd.vercel.app/api/comic?num=' + id);
         let data : DateInterface = await res.json();
-
-        const jokeImage = document.getElementById('jokeImage') as HTMLImageElement;
-        const jokeTitle = document.getElementById('jokeTitle') as HTMLHeadingElement;
-        const jokeDate = document.getElementById('jokeDate') as HTMLParagraphElement;
-        const jokeText = document.getElementById('jokeText') as HTMLParagraphElement;
-
-        jokeImage.src = data.img;
-        jokeImage.alt = data.alt;
-        jokeTitle.innerText = data.title;
-        jokeDate.innerText = new Date(data.year, data.month - 1, data.day).toLocaleDateString();
-        jokeText.innerText = data.alt;
+        return data;
     }
+
+    let promise = getJoke();
 </script>
 
-<h1>JOKE</h1>
-<h2 id="jokeTitle"></h2>
-<img id="jokeImage">
-<p id="jokeText"></p>
-<p id="jokeDate"></p>
+{#await promise}
+    <p>...waiting</p>
+{:then number}
+    <h1>JOKE</h1>
+    <h2>{number.title}</h2>
+    <img src={number.img} alt={number.alt}>
+    <p>{number.alt}</p>
+    <p>{new Date(number.year, number.month - 1, number.day).toLocaleDateString()}</p>
+{:catch error}
+    <p style="color: red">{error.message}</p>
+{/await}
