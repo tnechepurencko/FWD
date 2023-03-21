@@ -3,8 +3,6 @@
 	<title>Homework5</title>
 </head>
 
-<link rel="stylesheet" href="/src/routes/styles.css">
-
 <main>
 	<header>
 		<h1>Tatiana Nechepurenko</h1>
