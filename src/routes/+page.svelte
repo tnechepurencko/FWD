@@ -3,7 +3,7 @@
 	<title>Homework5</title>
 </head>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/src/routes/styles.css">
 
 <main>
 	<header>
