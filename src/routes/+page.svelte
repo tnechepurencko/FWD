@@ -1,8 +1,9 @@
-
 <head>
 	<meta charset="UTF-8">
 	<title>Homework5</title>
 </head>
+
+<link rel="stylesheet" href="styles.css">
 
 <main>
 	<header>
