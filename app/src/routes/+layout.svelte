@@ -3,7 +3,7 @@
 </script>
 
 <section>
-    <p>Useful links:<a href="/sverdle/bio">Bio</a><a href="/sverdle/joke">Joke</a></p>
+    <p>Useful links:<a href="/bio">Bio</a><a href="/joke">Joke</a></p>
 </section>
 
 <slot></slot>
