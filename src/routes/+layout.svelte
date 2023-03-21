@@ -10,6 +10,34 @@
 <slot></slot>
 
 <style>
+    :root {
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background-image: linear-gradient(lightcyan 0%, lightblue 80%, lightcyan 95%);
+    }
+
+    a {
+        color: orangered;
+        text-decoration: none;
+        font-size: 110%;
+    }
+
+    h1, h2 {
+        text-align: center;
+        font-weight: 400;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 0.6;
+    }
+
 	.image {
 		width: 30px;
 		height: 30px;
