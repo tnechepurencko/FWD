@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	import './styles.css';
+    import { base } from '$app/paths';
 </script>
 
 <section>
-    <p>Useful links:<a href="/bio">Bio</a><a href="/joke">Joke</a></p>
+    <p>Useful links:<a href="{base}/bio">Bio</a><a href="{base}/joke">Joke</a></p>
 </section>
 
 <slot></slot>
